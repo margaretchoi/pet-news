@@ -1,0 +1,26 @@
+body {
+	margin: 0 auto;
+}
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto;
+	background: #ececec;
+}
+
+nav a.nav-link {
+	margin: 20px;
+}
+
+#logo {
+	font-size: 3em;
+}
+
+#site-nav {
+
+}
+
+#site-nav li {
+
+}
