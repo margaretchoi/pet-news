@@ -1,6 +1,9 @@
-body {
-	margin: 0 auto;
+html, body {
+    margin: 0 auto;
+    height: 100%;
+    font-family: 'Open Sans', arial, sans-serif;
 }
+
 nav {
 	display: flex;
 	flex-direction: row;
@@ -9,18 +12,122 @@ nav {
 	background: #ececec;
 }
 
+a {
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
 nav a.nav-link {
 	margin: 20px;
 }
 
+header {
+	margin: 40px;
+	display: flex;
+	flex-direction: row;
+	font-family: 'Love Ya Like A Sister', cursive;
+
+}
+
+
+#logo_img {
+	flex-grow: 1;
+	width: 50%;
+    margin: 0px 20px 0px 10%;
+    text-align: center;
+}
+
+#logo_img img{
+    max-width: 75%;
+}
+
 #logo {
-	font-size: 3em;
+	font-size: 4em;
+	flex-grow: 1;
+	width: 50%;
+	margin: 100px 10% 0px 20px;
 }
 
-#site-nav {
+.site-nav {
+	padding: 14px 0px;
+}
+
+.site-nav li {
 
 }
 
-#site-nav li {
+.button {
+	font-size: 20px;
+	font-family: 'Open Sans', arial, sans-serif;
+	text-transform: uppercase;
+	border: 1px solid #ececec;
+	padding: 20px 40px;
+	text-decoration: none;
+    animation-name: buttonOut;
+    animation-fill-mode: forwards;
+    animation-duration: 0.2s;
+    display: inline-block;
+    box-shadow: 2px 2px 5px #ececec;
+} 
+.button:hover {
+	background: #cdcdcd;
+    animation-name: buttonIn;
+    animation-fill-mode: forwards;
+    animation-duration: 0.2s;
+    padding: 24px 44px;
+}
+.icon {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+.icon-ball {
+}
+
+@keyframes buttonIn {
+    from {padding: 20px 40px; font-size: 20px; box-shadow: 2px 2px 5px #ececec;}
+    to {padding: 22px 42px; font-size: 21px; box-shadow: 2px 2px 10px #ececec;}
+}
+@keyframes buttonOut {
+    from {padding: 22px 42px; font-size: 21px; box-shadow: 2px 2px 10px #ececec;}
+    to {padding: 20px 40px; font-size: 20px; box-shadow: 2px 2px 5px #ececec;}
+}
+
+section {
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+    width: 80%;
+    padding: 0px 10%;
 
 }
+
+section .wrapper{
+	width: 1024px;
+}
+
+#results-wrapper {
+
+}
+
+#results-wrapper table {
+	border: 1px solid;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#results {
+	
+}
+
+
+
+
+
+
+
