@@ -15,7 +15,7 @@ app.listen(port, function() {
 //Requiring Handlebars
 let exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars")
+app.set("view engine", "handlebars");
 
 app.use(express.static("public"));
 
@@ -32,27 +32,4 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function() {
 	console.log('CONNECTED');
-
-	// var articleSchema = mongoose.Schema({
-	// 	title: String
-	// });
-
-	// var Article = mongoose.model('Article', articleSchema);
-
-	// var latest = new Article({ title: 'Mongoose article' });
-
-	// latest.save(function (err, latest) {
-	// 	if (err) return console.error(err);
-	// 	console.log('Latest saved!');
-	// });
-
-	// //function to add article to the database
-
-
-
-	// Article.find(function (err, articles) {
-	//   if (err) return console.error(err);
-	//   console.log('List of articles', articles);
-	// })
-
 });

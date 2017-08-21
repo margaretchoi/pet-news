@@ -1,0 +1,16 @@
+{{>nav}}
+<section>
+	<h1>{{this.article.title}}</h1>
+	<h4>Comments<h4> 
+	<div>
+	<p>{{this.article.comment}}</p>
+	<form id="comment-form"> 
+	  Name:<br>
+	  <input type="text" name="name">
+	  <br>
+	  Comment:<br>
+	  <input type="text" name="comment">
+	  <br><br>
+	  <input type="submit" id="submit-comment" value="Submit">
+	</form>
+</section>

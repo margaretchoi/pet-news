@@ -116,7 +116,6 @@ section .wrapper{
 }
 
 #results-wrapper table {
-	border: 1px solid;
 	width: 100%;
 	margin-bottom: 20px;
 }
@@ -125,6 +124,17 @@ section .wrapper{
 	
 }
 
+#results-table tr{
+	margin-bottom: 10px;
+}
+
+.article-img {
+	min-width: 160px;
+}
+
+.article-info {
+	padding: 0px 20px;
+}
 
 
 

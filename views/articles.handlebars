@@ -1,13 +1,19 @@
+{{>nav}}
 <section>
+	<h1>All Articles</h1>
 	<div id="all-articles" class="">
 		<div id="results-wrapper">
-				<table>
-					<thead>
-						<th>Title</th>
-						<th>Image</th>
-						<th>Link</th>
-					</thead>
+				<table id="results-table">
 					<tbody>
+					{{#each article}}
+						<tr>
+							<td class="article-img" style="background-image:{{this.image}}; background-size: 160px 100px; background-repeat: no-repeat"><a href=""</td>
+							<td class="article-info">
+								<span class="">{{this.label}}<span><br>
+								<h2><a href="/articles/{{this._id}}">{{this.title}}</a></h2>
+							</td>
+						</tr>
+					{{/each}}
 					</tbody>
 				</table>
 				<div id="results">Articles go in here!</div>
