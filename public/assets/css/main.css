@@ -193,7 +193,9 @@ section .wrapper{
 
 
 #comment-form {
-	
+	background: #ececec;
+	padding: 20px;
+	border: 1px solid #cdcdcd;
 }
 
 #comment-form span{
