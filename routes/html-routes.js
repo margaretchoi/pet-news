@@ -4,9 +4,4 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/saved", function(req, res) {
-    res.render("saved");
-  });
-
-
 };

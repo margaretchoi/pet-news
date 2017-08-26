@@ -1,16 +1,18 @@
 {{>nav}}
 <section>
 	<h1>{{this.article.title}}</h1>
-	<h4>Comments<h4> 
+	<img src="{{this.article.image}}" width="620px" height="349px">
+	</div>
+	<h2>Comments</h2> 
 	<div>
-	<p>{{this.article.comment}}</p>
-	<form id="comment-form"> 
-	  Name:<br>
-	  <input type="text" name="name">
+	<form id="comment-form" action="/articles/{{this.article._id}}" method="post"> 
+	  <input type="text" id="comment-name" name="name" placeholder="Name">
 	  <br>
-	  Comment:<br>
-	  <input type="text" name="comment">
-	  <br><br>
-	  <input type="submit" id="submit-comment" value="Submit">
+	  <textarea rows="5" id="comment-body" name="body" placeholder="Make a Comment!"></textarea>
+	  <br>
+	  <input type="submit" data-id="{{this.article._id}}" id="submit-comment" value="Submit" class="whitewashed blue-button">
 	</form>
+	<div id="comment-div">
+		{{this.article.comment}}
+	</div>
 </section>

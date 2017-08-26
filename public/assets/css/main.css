@@ -9,10 +9,10 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	margin: 0 auto;
-	background: #ececec;
+	background: #5492DB;
 }
 
-a {
+a, p {
 	font-family: 'Open Sans', arial, sans-serif;
 }
 
@@ -20,8 +20,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Love Ya Like A Sister', cursive;
 }
 
+h1 { font-size: 4em; }
+
+.whitewashed {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: normal;
+	color: #fff;
+	text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.2),
+		1px 1px 2px rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.5px;
+}
+
 nav a.nav-link {
 	margin: 20px;
+}
+
+nav a.nav-link:hover {
+	color: rgba(0, 0, 0, 0.8);
 }
 
 header {
@@ -41,22 +57,40 @@ header {
 }
 
 #logo_img img{
-    max-width: 75%;
+    max-width: 100%;
 }
 
 #logo {
-	font-size: 4em;
 	flex-grow: 1;
 	width: 50%;
-	margin: 100px 10% 0px 20px;
+	margin: 20px 10% 0px 20px;
 }
+
+#logo h1 {
+	font-size: 6em;
+}
+
+
+#logo p{
+	font-size: .2em;
+	margin-top: 40px;
+}
+
 
 .site-nav {
 	padding: 14px 0px;
 }
 
-.site-nav li {
-
+.blue-button {
+	border: 1px solid #ececec;
+	padding: 10px 20px;
+	text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 5px #ececec;
+    background: #5492DB;
+} 
+.blue-button:hover {
+	background: #cdcdcd;
 }
 
 .button {
@@ -71,6 +105,8 @@ header {
     animation-duration: 0.2s;
     display: inline-block;
     box-shadow: 2px 2px 5px #ececec;
+    background: #5492DB;
+    color: #fff;
 } 
 .button:hover {
 	background: #cdcdcd;
@@ -102,9 +138,9 @@ section {
 	display: flex; 
 	flex-direction: column;
 	justify-content: center;
-    width: 80%;
-    padding: 0px 10%;
-
+    width: 60%;
+    padding: 0px 20%;
+	margin-bottom: 40px;
 }
 
 section .wrapper{
@@ -124,20 +160,59 @@ section .wrapper{
 	
 }
 
-#results-table tr{
-	margin-bottom: 10px;
+#results-table td{
+	padding: 20px 0px;
+}
+
+
+#results-table img{
+	margin-right: 20px;
+	border: 5px solid #5492DB;
+	box-shadow: 4px 4px 10px #cdcdcd;
 }
 
 .article-img {
 	min-width: 160px;
+	padding-right: 20px;
 }
+
 
 .article-info {
 	padding: 0px 20px;
 }
 
+.article-tag {
+}
 
 
+.article-title {
+	text-decoration: none;
+	font-family: 'Love Ya Like A Sister', cursive;
+	color: #5492DB;
+}
+
+
+#comment-form {
+	
+}
+
+#comment-form span{
+	font-size: 0.8em;
+}
+
+#comment-name {
+	padding: 6px;
+	margin-bottom: 6px;
+}
+
+#comment-body{
+	width: 100%;
+	padding: 6px;
+}
+
+#comment-div {
+
+}
 
 
 

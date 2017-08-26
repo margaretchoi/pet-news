@@ -6,6 +6,7 @@ var ArticleSchema = new Schema({
   // title is a required string
   title: {
     type: String,
+    unique: true,
     required: true
   },
   image: {
@@ -16,10 +17,10 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  comment: {
+  comment: [{
     type: Schema.Types.ObjectId,
     ref: "Comment"
-  }
+  }]
 });
 
 // Create the Article model with the ArticleSchema

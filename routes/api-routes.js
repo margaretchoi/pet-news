@@ -21,10 +21,16 @@ module.exports = function(app) {
 
 		    	let result = {};
 
-				// result.title = $(this).html();
-				// result.title = $(a[class=cbn-card-headline]').text();
+		    	let urlString = $('div.card__image__src', this).css('background-image');
+
+		    	function parseUrl(urlString) {
+	    			let newString = urlString.replace("url(", "");
+	    			let finalString = newString.replace(")", "");
+	    			return finalString;
+		    	};
+
 				result.title = $('a.bn-card-headline', this).text();
-				result.image = $('div.card__image__src', this).css('background-image');
+				result.image = parseUrl(urlString);
 				result.label = $('h3.card__label__text', this).html();
 				
 				let entry = new Article(result);
@@ -38,14 +44,14 @@ module.exports = function(app) {
 			        }
 			        // Or log the doc
 			        else {
-			          console.log(doc);
+			          // console.log(doc);
 			        }
 				});
 			});
 		    
 		});	
 		console.log("Scrape completed!");
-		res.redirect("/");
+		res.redirect("/articles");
 	});
 
 	// Route to grab all articles in the database
@@ -75,6 +81,7 @@ module.exports = function(app) {
 	      console.log(error);
 	    }
 	    else {
+	      console.log("NOTES DOC", doc);
 	      let currentArticle = {
 	      	  article: doc
 	      }; 
@@ -87,6 +94,8 @@ module.exports = function(app) {
 	// Create a new comment or replace an existing comment
 	app.post("/articles/:id", function(req, res) {
 
+	  console.log('REQ body', req.body);
+
 	  // Create a new comment and pass the req.body to the entry
 	  var newComment = new Comment(req.body);
 
@@ -96,16 +105,22 @@ module.exports = function(app) {
 	      console.log(error);
 	    }
 	    else {
-	      // Use the article id to find and update it's comment
-	      Article.findOneAndUpdate({ "_id": req.params.id }, { "comment": doc._id })
-	      .exec(function(err, doc) {
+
+	  	  console.log('saving');
+
+		   Article.findOneAndUpdate({ "_id": req.params.id }, { $push: { "comment": doc._id } }, { new: true }, function(err, newdoc) {
+	        // Send any errors to the browser
 	        if (err) {
-	          console.log(err);
+	          res.send(err);
 	        }
+	        // Or send the newdoc to the browser
 	        else {
-	          res.send(doc);
+	          // res.send(newdoc);
+	          res.redirect("/articles/" + req.params.id);
 	        }
 	      });
+
+
 	    }
 	  });
 	});
