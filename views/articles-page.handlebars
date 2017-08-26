@@ -13,6 +13,10 @@
 	  <input type="submit" data-id="{{this.article._id}}" id="submit-comment" value="Submit" class="whitewashed blue-button">
 	</form>
 	<div id="comment-div">
-		{{this.article.comment}}
+		{{#each this.article.comment}}
+			<p>{{this.name}} <span>{{this.dateCreated}}</span><p>
+			<p>{{this.body}}<p>
+			<hr>
+		{{/each}}
 	</div>
 </section>
