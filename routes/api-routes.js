@@ -81,7 +81,6 @@ module.exports = function(app) {
 	      console.log(error);
 	    }
 	    else {
-	      console.log("NOTES DOC", doc);
 	      let currentArticle = {
 	      	  article: doc
 	      }; 
@@ -125,5 +124,20 @@ module.exports = function(app) {
 	  });
 	});
 
+
+	app.get("/articles/:id/delete", function(req, res) {
+
+	   Comment.findByIdAndRemove({ "_id": req.params.id }, function(err, newdoc) {
+        // Send any errors to the browser
+        if (err) {
+          res.send(err);
+        }
+        // Or send the newdoc to the browser
+        else {
+          res.send(newdoc);
+        }
+      });
+
+	});
 
 };

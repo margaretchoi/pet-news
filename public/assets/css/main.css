@@ -37,7 +37,7 @@ nav a.nav-link {
 }
 
 nav a.nav-link:hover {
-	color: rgba(0, 0, 0, 0.8);
+	color: #094AAB;
 }
 
 header {
@@ -90,7 +90,7 @@ header {
     background: #5492DB;
 } 
 .blue-button:hover {
-	background: #cdcdcd;
+	background: #094AAB;
 }
 
 .button {
@@ -109,15 +109,15 @@ header {
     color: #fff;
 } 
 .button:hover {
-	background: #cdcdcd;
+	background: #094AAB;
     animation-name: buttonIn;
     animation-fill-mode: forwards;
     animation-duration: 0.2s;
     padding: 24px 44px;
 }
 .icon {
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 	display: inline-block;
 	margin: 0px 5px;
 }
@@ -208,13 +208,38 @@ section .wrapper{
 }
 
 #comment-body{
-	width: 100%;
+	width: 90%;
 	padding: 6px;
 }
 
 #comment-div {
-
+	margin: 20px 0px;
 }
 
+#comment-div .date{
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 0px;
+}
 
+#comment-div .name{
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
+#comment-div .name img{
+	margin-right: 5px;
+	width: 14px;
+	height: 14px;
+}
+
+#comment-div .body{
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 1.2em;
+}
+
+#comment-div .delete{
+	font-size: 0.8em;
+	float: right;
+	padding: 4px 10px;
+}
