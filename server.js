@@ -31,8 +31,8 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
 // Connecting Mongoose to mongoDB
-mongoose.connect('mongodb://localhost/huffpetsdb');
-// mongoose.connect('mongodb://heroku_rxgxccb9:lm8t3qfgqnr3tcr0disbfh9vo8@ds111589.mlab.com:11589/heroku_rxgxccb9');
+// mongoose.connect('mongodb://localhost/huffpetsdb');
+mongoose.connect('mongodb://heroku_rxgxccb9:lm8t3qfgqnr3tcr0disbfh9vo8@ds111589.mlab.com:11589/heroku_rxgxccb9');
 
 
 let db = mongoose.connection;
